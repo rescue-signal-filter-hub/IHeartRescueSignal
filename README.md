@@ -36,3 +36,19 @@ if __name__ == "__main__":
     result = process_rescue_signal(sample_sensor_stream)
     print("--- RESCUE SCANNER STATUS ---")
     print(result)
+
+# Disaster Life-Detection Signal Filter
+
+An ultra-lightweight, offline-capable signal processing script designed to isolate human vital signs and intentional signals (breathing, heartbeats, or rhythmic tapping) from environmental noise during structural collapse rescue operations.
+
+## Core Purpose
+Applies a strict **0.1 Hz to 2 Hz bandpass window** to filter out chaotic background static, structural settling, and wind interference, focusing entirely on biological and intentional human frequencies.
+
+## Quick Start
+1. Save the code as `rescue_filter.py`.
+2. Connect your sensor stream (contact mic, geophone, or radar feed).
+3. Run: `python rescue_filter.py`
+
+## Features
+* **Zero Dependencies:** Runs natively on standard Python without heavy libraries.
+* **Offline Ready:** Operates completely without internet connectivity or cloud infrastructure.
